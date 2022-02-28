@@ -5,4 +5,4 @@ a script that fixes the brightness slider and cellular connection bug on (at lea
 
 #note: make sure you have adb enabled and have root on your phone and have the adb driver installed on your windows desktop/laptop
 
-just extract the zip and run FixThing.cmd
+just extract the zip and run FixThing.cmd and then navigate trough the menu using the number keys
