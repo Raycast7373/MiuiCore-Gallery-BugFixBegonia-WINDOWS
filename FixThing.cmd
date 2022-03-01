@@ -39,15 +39,15 @@ echo.
 echo Fixing Brightness slider bug...
 echo.
 echo creating backup...
-ADB\adb.exe pull /data/ADB\adb.exe/modules/MiuiGallery/service.sh backup\
+ADB\adb.exe pull /data/adb/modules/MiuiGallery/service.sh backup\
 echo done!
 echo.
 echo removing old file that causes brightness slider bug...
-ADB\adb.exe shell su -c rm /data/ADB\adb.exe/modules/MiuiGallery/service.sh
+ADB\adb.exe shell su -c rm /data/adb/modules/MiuiGallery/service.sh
 echo done!
 echo.
 echo copying good file that doesnt cause this stupid bug...
-ADB\adb.exe push service.sh /data/ADB\adb.exe/modules/MiuiGallery/
+ADB\adb.exe push service.sh /data/adb/modules/MiuiGallery/
 echo Done!
 echo.
 pause
@@ -58,17 +58,17 @@ cls
 ADB\adb.exe devices
 echo.
 echo creating backup of the lib files...
-ADB\adb.exe pull /data/ADB\adb.exe/modules/MiuiCore/system/lib backup\
-ADB\adb.exe pull /data/ADB\adb.exe/modules/MiuiCore/system/lib64 backup\
+ADB\adb.exe pull /data/adb/modules/MiuiCore/system/lib backup\
+ADB\adb.exe pull /data/adb/modules/MiuiCore/system/lib64 backup\
 echo done!
 echo.
 echo removing files that causes the problems...
-ADB\adb.exe shell su -c rm /data/ADB\adb.exe/modules/MiuiCore/system/lib/libmpbase.so
-ADB\adb.exe shell su -c rm /data/ADB\adb.exe/modules/MiuiCore/system/lib64/libmpbase.so
-ADB\adb.exe shell su -c rm /data/ADB\adb.exe/modules/MiuiCore/system/lib/libc++_shared.so
-ADB\adb.exe shell su -c rm /data/ADB\adb.exe/modules/MiuiCore/system/lib64/libc++_shared.so
-ADB\adb.exe shell su -c rm /data/ADB\adb.exe/modules/MiuiCore/system/lib/libarcsoft_beautyshot.so
-ADB\adb.exe shell su -c rm /data/ADB\adb.exe/modules/MiuiCore/system/lib64/libarcsoft_beautyshot.so
+ADB\adb.exe shell su -c rm /data/adb/modules/MiuiCore/system/lib/libmpbase.so
+ADB\adb.exe shell su -c rm /data/adb/modules/MiuiCore/system/lib64/libmpbase.so
+ADB\adb.exe shell su -c rm /data/adb/modules/MiuiCore/system/lib/libc++_shared.so
+ADB\adb.exe shell su -c rm /data/adb/modules/MiuiCore/system/lib64/libc++_shared.so
+ADB\adb.exe shell su -c rm /data/adb/modules/MiuiCore/system/lib/libarcsoft_beautyshot.so
+ADB\adb.exe shell su -c rm /data/adb/modules/MiuiCore/system/lib64/libarcsoft_beautyshot.so
 ADB\adb.exe shell su -c setprop miui.features 0
 echo done!
 echo.
@@ -114,8 +114,8 @@ goto RESTOREMENU
 :RESCORE
 cls
 echo Restoring MiuiCore...
-ADB\adb.exe push backup\lib /data/ADB\adb.exe/modules/MiuiCore/system
-ADB\adb.exe push backup\lib64 /data/ADB\adb.exe/modules/MiuiCore/system
+ADB\adb.exe push backup\lib /data/adb/modules/MiuiCore/system
+ADB\adb.exe push backup\lib64 /data/adb/modules/MiuiCore/system
 echo Done!
 pause
 goto RESTOREMENU
@@ -123,7 +123,7 @@ goto RESTOREMENU
 :RESGAL
 cls
 echo Restoring MiuiGallery...
-ADB\adb.exe push backup\service.sh /data/ADB\adb.exe/modules/MiuiGallery
+ADB\adb.exe push backup\service.sh /data/adb/modules/MiuiGallery
 echo Done!
 pause
 goto RESTOREMENU
